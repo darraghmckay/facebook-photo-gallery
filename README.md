@@ -1,4 +1,4 @@
-**FACEBOOK API GALLERY**
+**FACEBOOK API PHOTO GALLERY**
 ------------------------
 This library / example allows you to grab all of the photos albums of a given Facebook Page / Profile and create a photo Gallery. 
 
@@ -6,8 +6,8 @@ It's helpful if you don't want to have to create a photo upload system for a cli
 
 It's built using Bootstrap for layout / design but it can be changed to your own liking. 
 
-**DEMO**
-Coming Soon
+**[LIVE DEMO](https://darraghmckay.com/projects/fb-gallery/)**
+
 
 **Features**
 
