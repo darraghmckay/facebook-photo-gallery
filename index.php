@@ -9,9 +9,7 @@
 		<script type="text/javascript">
 
 			function getAlbums(param){
-
-				
-
+				//Makes An AJAX Request On Load which retrieves the albums
 				$.ajax({
 			        type: 'post',
 			        url: 'scripts/loadGallery.php',
@@ -19,7 +17,9 @@
 			           extra_params: param
 			        },
 			        success: function( data ) {
+			        	//Hide The Spinner
 			            document.getElementById("spinner").style.display = "none";
+			            //Put the Data in the Div
 			            document.getElementById("galleryDiv").innerHTML = data;
 			        }
 			    });
@@ -27,7 +27,15 @@
 		</script>
 
 	</head>
-	<?php if(isset($_GET['b']))
+
+	<?php 
+		/* PAGINATION
+			Proccess and Pagination 
+			 - B: before
+			 - A: after
+			 They contain the photo_id of the image that was loaded before/after it, for pagination	
+		*/
+		if(isset($_GET['b']))
 		{
 			$quer = "&before=".$_GET['b'];
 		}
@@ -36,7 +44,7 @@
 			$quer = "&after=".$_GET['a'];
 		}
 		else{
-			$quer = "";
+			$quer = ""; //If It's blank it loads from the start of the album
 		}
 		//if they've already been navigating
 	?>
@@ -68,7 +76,7 @@
 	        
 	    </div>
     </div>		
-
+    <!-- JQUERY and Bootstrap Scripts -->
 	<script src="//code.jquery.com/jquery-latest.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>

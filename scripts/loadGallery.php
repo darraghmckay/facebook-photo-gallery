@@ -21,7 +21,6 @@
 		//Get Albums
 		$fields = "id,count,cover_photo,created_time,description,link,name";
 		$json_link = "https://graph.facebook.com/{$fb_page_id}/albums/?access_token={$access_token}&fields={$fields}". $extra_params;
-		//echo $json_link;
 
 		$json = json_decode(curl_get_contents($json_link));
 		$count = 0;

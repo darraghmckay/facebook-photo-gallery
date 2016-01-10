@@ -1,7 +1,7 @@
 <?php
 	
-	$fb_page_id = "131774886875208";
-	$access_token = "974662995944937|h9GLXXk3KSeDpUBMS0pdvEiX0lA";
+	$fb_page_id = "##############";
+	$access_token = "#############|#######################";
 
 	$albums_per_page = 12;
 	$pics_per_page = 16;
